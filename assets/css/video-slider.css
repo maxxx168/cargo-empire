@@ -1,0 +1,169 @@
+/* Video Slider Styles - Revised for better centering and single video display */
+.video-slider-section {
+    padding: 120px 0;
+    background-color: #f7f7f7;
+}
+
+.video-slider__inner {
+    position: relative;
+    padding: 30px 0 100px; /* Added top padding */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Ensure the swiper container is properly sized */
+#videoSlider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Force single slide view */
+#videoSlider .swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+#videoSlider .swiper-slide {
+    width: 100% !important; /* Force full width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-slide {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: #000;
+    width: 90%; /* Control width */
+    max-width: 700px; /* Maximum width */
+    margin: 0 auto; /* Center in slide */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #000;
+    display: block;
+}
+
+.video-info {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 25px;
+    border-radius: 0 0 8px 8px;
+}
+
+.video-title {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.video-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+/* Navigation controls - MOVED BELOW VIDEO */
+.video-slider__nav {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.swiper-button-prev1,
+.swiper-button-next1 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--onpoint-base);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.swiper-button-prev1:hover,
+.swiper-button-next1:hover {
+    background-color: var(--onpoint-black);
+}
+
+.swiper-button-prev1 i,
+.swiper-button-next1 i {
+    font-size: 20px;
+}
+
+/* Custom video controls */
+.video-custom-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.video-play-btn {
+    background-color: var(--onpoint-base);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.video-play-btn:hover {
+    background-color: var(--onpoint-black);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .video-slide {
+        width: 95%;
+    }
+    
+    .video-info {
+        padding: 15px 20px;
+    }
+    
+    .video-title {
+        font-size: 16px;
+    }
+    
+    .video-description {
+        font-size: 12px;
+    }
+}

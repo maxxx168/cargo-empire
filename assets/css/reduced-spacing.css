@@ -1,0 +1,50 @@
+/* Reduce spacing between sections by 50% */
+
+/* Target the bottom margin/padding of sections to reduce the gap to the next section */
+.banner-one,
+.services-two,
+.why-choose-two,
+.counter-two,
+.process-one,
+.project-two,
+.video-slider-section {
+    margin-bottom: 0 !important;  /* Remove any bottom margins */
+    padding-bottom: 60px !important;  /* Reduced from typical 120px */
+}
+
+/* Target the top padding of sections to reduce the gap from the previous section */
+.services-two,
+.why-choose-two,
+.counter-two,
+.process-one,
+.project-two,
+.video-slider-section,
+.google-map-one {
+    padding-top: 60px !important;  /* Reduced from typical 120px */
+}
+
+/* Special case for the first section which might have different spacing */
+.banner-one {
+    padding-top: 100px !important;  /* Reduced from typical 200px */
+}
+
+/* Special case for the map section which typically has less padding */
+.google-map-one {
+    padding-top: 30px !important;  /* Reduced from typical 60px */
+    padding-bottom: 30px !important;  /* Reduced from typical 60px */
+}
+
+.banner-one {
+    padding-top: 60px !important;  /* Reduced from typical 200px */
+}
+
+/* Remove spacing between ticker and header */
+.main-header-two {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.page-wrapper {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}

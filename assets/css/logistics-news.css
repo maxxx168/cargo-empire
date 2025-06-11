@@ -1,0 +1,232 @@
+/* Logistics News Section Styles */
+.logistics-news-section {
+    padding: 120px 0;
+    background-color: #f7f7f7;
+}
+
+.logistics-news__single {
+    position: relative;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 600px; /* Fixed height for all boxes */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.logistics-news__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--onpoint-base);
+    color: #fff;
+}
+
+.logistics-news__category {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.logistics-news__refresh {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.logistics-news__refresh:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logistics-news__content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0;
+}
+
+.logistics-news__loading {
+    padding: 20px;
+    text-align: center;
+    color: #777;
+}
+
+.logistics-news__item {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.logistics-news__item:last-child {
+    border-bottom: none;
+}
+
+.logistics-news__date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.logistics-news__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.logistics-news__text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.logistics-news__source {
+    display: inline-block;
+    font-size: 14px;
+    color: var(--onpoint-base);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logistics-news__source:hover {
+    color: var(--onpoint-black);
+}
+
+.logistics-news__btn-box {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.logistics-news__btn {
+    display: inline-block;
+    padding: 10px 30px;
+}
+
+/* Status indicators for logistics companies */
+.company-status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.company-status__name {
+    flex: 1;
+    font-weight: 600;
+}
+
+.company-status__indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-normal {
+    background-color: #28a745; /* Green */
+}
+
+.status-delay {
+    background-color: #ffc107; /* Yellow */
+}
+
+.status-critical {
+    background-color: #dc3545; /* Red */
+}
+
+.company-status__text {
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+/* Confirmation modal */
+.confirmation-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmation-modal__content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation-modal__title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--onpoint-black);
+}
+
+.confirmation-modal__text {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.confirmation-modal__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.confirmation-modal__btn {
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.confirmation-modal__btn--confirm {
+    background-color: var(--onpoint-base);
+    color: #fff;
+    border: none;
+}
+
+.confirmation-modal__btn--confirm:hover {
+    background-color: var(--onpoint-black);
+}
+
+.confirmation-modal__btn--cancel {
+    background-color: #f1f1f1;
+    color: #333;
+    border: none;
+}
+
+.confirmation-modal__btn--cancel:hover {
+    background-color: #e1e1e1;
+}
+
+/* Animation for refresh button */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.refreshing {
+    animation: spin 1s linear infinite;
+}
